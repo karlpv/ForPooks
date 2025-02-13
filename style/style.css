@@ -112,23 +112,41 @@ body {
   font-size: 15rem;
 }
 
+/* Centering the image and text */
 .six {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
 }
 
+/* Making the image square and centered */
 .six img {
-  display: inline-block;
-  max-width: 45%;
-  height: auto;
+  width: 250px; /* Adjust to make it a perfect square */
+  height: 250px;
+  object-fit: cover; /* Ensures it fills the square without distortion */
+  object-position: top; /* Adjusts cropping to prioritize her face */
+  border-radius: 10px; /* Optional: adds slightly rounded corners */
+  margin-bottom: 20px; /* Space between image and text */
 }
 
-.six .hat {
-  position: absolute;
-  width: 80px;
-  top: -35px;
-  left: 41.5%;
-  /* transform: scale(0.1); */
+/* Centering the wish text below the image */
+.wish {
+  max-width: 80%;
 }
+
+.wish-hbd {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#wishText {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
 
 .baloons img {
   display: inline-block;
@@ -297,4 +315,16 @@ body {
     font-size: 1.5rem;
     font-weight: lighter;
   }
+}
+
+
+.qr-code {
+  opacity: 0; /* Starts hidden but still in the DOM */
+  visibility: hidden; /* Ensures it's still on the page */
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white; /* Helps if it's blending into the background */
 }
